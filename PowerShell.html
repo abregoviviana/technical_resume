@@ -141,7 +141,7 @@
 
 <p>I have also used PowerShell to remove items from a file directory. During an automated process that generated 100s of .pdfs, 100s of .xml files were also created. The following script gets files within a specific directory with a .xml format then loops through those items deleting each one as it goes. </p>
 
-<blockquote>get-childitem -path 'c:\users\nroberts\desktop\TCTesting' *.xml | foreach {Remove-item -path $_.FullName }</blockquote>
+<blockquote><p>get-childitem -path 'c:\users\nroberts\desktop\TCTesting' *.xml | foreach {Remove-item -path $_.FullName }</p></blockquote>
 
 <p>During a data management discussion with the HR team, a concern arose about have multiple copies of the same exact files saved in file shares. In order to quantity this concern I used PowerShell to first create a hash (which served as a unique identifier) for each file, then compare the hashes to report on what documents existed in 2 places.</p>
 
