@@ -131,7 +131,7 @@
 <h2>PowerShell Use Cases:</h2>
 <p>Important note: all the following PowerShell use cases assumes the user of the script has at least read access to the files, file paths. If you try to run these scripts without the proper permission, you will get an error. </p>
 <p>As an IT Analyst tasked with supporting HR, the primary way I use PowerShell is it gather information about Active Directory groups and group members. One of the major HR initiatives this year is to organize encrypted file shares. Below is a simple script to export members of an AD group to a csv:</p>
-<blockquote>Get-ADGroupMember -identity "ADGROUPNAME” | Select name, samaccountname | export-csv -path C:\groupmembers.csv</blockquote>
+<blockquote><p>Get-ADGroupMember -identity "ADGROUPNAME” | Select name, samaccountname | export-csv -path C:\groupmembers.csv</p></blockquote>
 <p>If you don’t have the AD Group name to find the members you can access it using the following:</p>
 <blockquote><p>Get-Acl \\path\to\the\folder |Select -Expand Access |Export-Csv C:\path\to\the\filename.csv -NoTypeInformation</p></blockquote>
 <p>The get-acl cmdlet is extremely helpful as it also shows you the file system rights (write, readandexecute, modify, fullcontrol, etc.) as well as describes if the file permissions for the particular item is inherited from another group.</p>
@@ -145,7 +145,7 @@
 
 <p>During a data management discussion with the HR team, a concern arose about have multiple copies of the same exact files saved in file shares. In order to quantity this concern I used PowerShell to first create a hash (which served as a unique identifier) for each file, then compare the hashes to report on what documents existed in 2 places.</p>
 
-<blockquote>Get-childitem -file -recurse | Group-Object Length | Where-Object { $_.Count -gt 1 } | select -ExpandProperty group | foreach  {get-filehash -literalpath $_.fullname} | group -property hash | where { $_.count -gt 1 } | select -ExpandProperty group | select hash, path | Out-File c:\path\to\file\duplicated_files.txt -width 510</blockquote>
+<blockquote><p>Get-childitem -file -recurse | Group-Object Length | Where-Object { $_.Count -gt 1 } | select -ExpandProperty group | foreach  {get-filehash -literalpath $_.fullname} | group -property hash | where { $_.count -gt 1 } | select -ExpandProperty group | select hash, path | Out-File c:\path\to\file\duplicated_files.txt -width 510</p></blockquote>
 <p>A few important items to note: this script runs the get-childitem of the directory you are currently in so make sure you list to that directory before running. If you are comparing a large number of files this can take many hours to complete, especially when this data is encrypted. Once you have identified these duplicate files you can then use PowerShell to move or delete them in mass.</p> 
 <h2>Online Course Evaluation:</h2>
 <p>The content provided by the Microsoft Virtual Academy was information rich but was tailored more for work IT professionals than students. Moreover, the segments of these courses usually an hour, making it harder to commit the information to memory. Finally, the webcast style of this MVA meant that the webcast meant that it included a lot of banter between the hosts, which in my opinion made the lectures longer than they needed to be. In summary, I think PowerShell is the most important skill I acquired with this course, but MVA was a poor delivery system for this content</p>
