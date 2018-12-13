@@ -10,29 +10,29 @@
      <title>Tech Skills - Linux</title>
 
      <style type="text/css">
-     <!--   * { margin: 0; padding: 0; }
-        body { font: 16px Helvetica, Sans-Serif; line-height: 24px; background: url(images/noise.jpg); }
+     <!--    * { margin: 0; padding: 0; }
+               * { margin: 0; padding: 0; }
+        body { font: 16px Helvetica, Sans-Serif; line-height: 24px; color: #612940; background: url(images/noise.jpg); }
         .clear { clear: both; }
         #page-wrap { width: 800px; margin: 40px auto 60px; }
         #pic { float: right; margin: -30px 0 0 0; }
-        h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
+        h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #612940; }
         h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
-        h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
+        h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #612940; font-weight: normal; }
         p { margin: 0 0 16px 0; }
-        a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
-        a:hover { border-bottom-style: solid; color: black; }
+        a { color: #C48D8D; text-decoration: none; border-bottom: 1px dotted #612940; }
+        a:hover { border-bottom-style: solid; color: #612940; }
         ul { margin: 0 0 32px 17px; }
         #objective { width: 500px; float: left; }
-        #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
-        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
+        #objective p { font-family: Georgia, Serif; font-style: italic; color: #3F3838; }
+        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #612940;  }
         dd { width: 600px; float: right; }
         dd.clear { float: none; margin: 0; height: 15px; }
-   
    -->
    
 .accordion {
-    background-color: #eee;
-    color: #444;
+    background-color: #C48D8D;
+    color: #FFFFFF;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -42,14 +42,17 @@
     font-size: 15px;
     transition: 0.4s;
 }
+
 .active, .accordion:hover {
-    background-color: #ccc; 
+    background-color: #612940; 
 }
+
 .panel {
     padding: 0 18px;
     display: none;
     background-color: white;
     overflow: hidden;
+
 }
 </style>
 </head>
@@ -73,7 +76,13 @@
 	
 <button class="accordion">Summary</button>
 <div class="panel">
-<p>Introduction to the ubuntu Linux distribution including managing file systems, directories, permissions, & basic scripting.</p>
+<p>
+
+   <ul>
+		<li>Creating virtual machines and installing Linux distribution systems</li>
+		<li>introduction to CLI concepts and Linux-specific commands </li>
+	</ul>
+</p>
 </div>
 
 <button class="accordion">Completed Courses</button>
@@ -111,11 +120,12 @@
 	
 <button class="accordion">Activity Log</button>
 <div class="panel">
-<h2>Key Concepts:</h2>
-<p>Before starting the online course for Linux you should install software for running virtual machine on your local PC. I used Oracle VM VirtualBox (which is used in the install demo as well). You should also go ahead and download the Ubuntu .iso file. While the videos walk through this process, it is a lot easier to follow along with the files are ready to go before you begin. </p>
-<p>When going through the demonstrations that within this course, the major issue I continuously ran into was case sensitivity. While I think the videos do an okay job of explaining why Linux is case sensitive, it is still extremely hard to get used to and can consistently mess you up. </p>
-<p>Working in the VI editor was the most challenging part of the play along demonstrations. There is not a good way to tell if you are in command or input mode, so it is very easy to mess up your script and hard to fix. My suggestion would be to use something VIM or Nano which is a little more user friendly.</p>
-<h2>Online Course Evaluation:</h2>
+<h2>Takeaways:</h2>
+<p>To get the most out of the training, I recommend downloading your own Linux distribution and setting it up in a virtual machine. While the guru99 training does a good job at introducing you to Linux, the training does not have any labs associated with it that you can use to apply what you have learned. By installing your own Linux distribution, you can follow along with the training sessions and improve your overall understanding of Linux. It does not necessarily have to be Ubuntu, which is the distribution system the training recommends you install. </p>
+
+<p>There are other beginner-friendly distributions, such as Linux Mint. However, going through the training is a lot easier when you know you are working with the same distribution as the training sessions. Moreover, if you are like me, and already have a Linux distribution system set up (Linux Mint), it also helps knowing you are starting from a blank state and won't have to deal with making sure everything you have is backed up in the case something messes up. </p>
+<p>I did run into some issues while setting up Ubuntu. </p>
+<h2>Course Notes:</h2>
 <p>I believe the Guru99 Introduction to Linux courses provided a great beginners guide to the Ubuntu Distro of a Linux desktop. While this content does not have labs or quizzes like the Github or edX materials, the videos are written in such a way that the user can follow along with all the steps on their own Ubuntu console. My major recommendation would be to require this course earlier in the semester (before the students take PowerShell), as I believe it would provide a better base foundation of OS management and scripting. </p>
 
 </div>
