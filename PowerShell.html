@@ -11,28 +11,28 @@
 
      <style type="text/css">
      <!--   * { margin: 0; padding: 0; }
-        body { font: 16px Helvetica, Sans-Serif; line-height: 24px; background: url(images/noise.jpg); }
+               * { margin: 0; padding: 0; }
+        body { font: 16px Helvetica, Sans-Serif; line-height: 24px; color: #612940; background: url(images/noise.jpg); }
         .clear { clear: both; }
         #page-wrap { width: 800px; margin: 40px auto 60px; }
         #pic { float: right; margin: -30px 0 0 0; }
-        h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
+        h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #612940; }
         h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
-        h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
+        h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #612940; font-weight: normal; }
         p { margin: 0 0 16px 0; }
-        a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
-        a:hover { border-bottom-style: solid; color: black; }
+        a { color: #C48D8D; text-decoration: none; border-bottom: 1px dotted #612940; }
+        a:hover { border-bottom-style: solid; color: #612940; }
         ul { margin: 0 0 32px 17px; }
         #objective { width: 500px; float: left; }
-        #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
-        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
+        #objective p { font-family: Georgia, Serif; font-style: italic; color: #3F3838; }
+        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #612940;  }
         dd { width: 600px; float: right; }
         dd.clear { float: none; margin: 0; height: 15px; }
-   
    -->
    
 .accordion {
-    background-color: #eee;
-    color: #444;
+    background-color: #C48D8D;
+    color: #FFFFFF;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -42,9 +42,11 @@
     font-size: 15px;
     transition: 0.4s;
 }
+
 .active, .accordion:hover {
-    background-color: #ccc; 
+    background-color: #612940; 
 }
+
 .panel {
     padding: 0 18px;
     display: none;
@@ -74,18 +76,18 @@
 <button class="accordion">Summary</button>
 <div class="panel">
 <p>
-<ul>
-<li>Formatting basic powershell commands for basic system management including an understanding of execution permissions and the powershell help system.</li>
-<li>Constructing pipelines, variables and arrays to store outputs be used in other commands. </li>
-<li>Introduction to scripting and process automation for system administration. </li>
-</ul>
+	<ul>
+		<li>Using PowerShell help system to troubleshoot issues</li>
+		<li>Creating modules and executing scripts for basic process automation</li>
+		<li>Introduction to objects, pipeline contruction, and enabling remoting sessions</li>
+	</ul>
 </p>
 </div>
 
 <button class="accordion">Completed Courses</button>
 <div class="panel">
   <p>
-	   Completed the following courses as part of the Microsoft Virtual Academy PowerShell Beginners course as of 12/3/18:
+	   Completed the following courses as part of the Microsoft Virtual Academy PowerShell Beginners course as of 12/2/18:
      </p>
 	<p>
 		Getting Started with Microsoft PowerShell:
@@ -114,42 +116,18 @@
 	</p>
   </p>
 	  </p>
-	<p> <a href="https://mva.microsoft.com/RewardEvidence.aspx/?key=zypiAxJbJpZRE_POJS-qkw2#">Proof of Completion</a> </p>
+	<p> <a href="https://mva.microsoft.com/RewardEvidence.aspx/?key=61br50S24DAkt1TpyWumLQ2">Proof of Completion</a> </p>
 		</div>
 	
 <button class="accordion">Activity Log</button>
 <div class="panel">
-  <h2>Key Concepts:</h2>
-<h3>Getting Started with Microsoft PowerShell:</h3>
-<p>One of the most important topics covered by this segment of the MVA is the help system. PowerShell has many ways to get help on different cmdlets, parameters, aliases, etc. When first learning PowerShell, this system can save a lot of time searching the internet for an answer when instead you can get help directly in the console.</p>
-<p>This segment of the course also covers the concept of the pipe. While the pipe is a critical aspect of PowerShell scripting, when writing new scripts for the first time I am careful to use them. Instead of using pipes to string together long lists of inputs processes and outputs, when scripting, I like to run each component and build onto it. This helps me to identify issues and understand each element of my script. Only then will I begin to combine cmdlets and processes into more complex items with pipes.</p>
-<p>One very key concept the MVA introduces in the Objects for Admins section is the idea of filtering as close to the beginning of your script as possible. Several of the scripts I have used (including the hashing script I reference below) can take a long time to run. Filtering the selected dataset to only the needed information as early in the script as possible before any additional processing takes place can help optimize the operation.</p>
-<h3>Desired State Configuration:</h3>
-<p>I had to reset this section of the MVA several types because I did not have a working knowledge of what desired state configuration is, so developing the components of it in PowerShell didn’t make any sense. It wasn’t until I head one of the hosts of the lectures say “stop touching the box”, did this sort of scripting make sense. </p>
-<p>While I’m sure that some companies use PowerShell to script DSC, I would assume more companies use a licensed tool to manage server configurations. However, I believe this portion of the MVA did an excellent job explaining the important of DSC and the overall dev ops mindset. They described the dev ops mindset as an attempt to keep the various spaces (production, test, development, QA) as in line as possible. To do this, developers should use common configurations were possible. Their goal is to house as many of the configs as possible in the common configuration scripts before moving to more specific scripts. </p>
-<p>I topic I found extremely interesting in the Desired State Configuration portion of the MVA was the idea that system administrators should treat instances/servers as “cattle not pets.” Create reusing configuration scripts makes it easier to just delete and start over on a node when something goes wrong. This concept was very benefit for me to hear and understand before I attempted to create an OpenVPN server on Ubuntu. After misreading the directions (in all their many, many various pages). I remember this lecture and just deleted the server and started over. In that instance, having config files ready to script the creation of the new server would have made the start over process even easier.</p>
-<h2>PowerShell Use Cases:</h2>
-<p>Important note: all the following PowerShell use cases assumes the user of the script has at least read access to the files, file paths. If you try to run these scripts without the proper permission, you will get an error. </p>
-<p>As an IT Analyst tasked with supporting HR, the primary way I use PowerShell is it gather information about Active Directory groups and group members. One of the major HR initiatives this year is to organize encrypted file shares. Below is a simple script to export members of an AD group to a csv:</p>
-<blockquote><p>Get-ADGroupMember -identity "ADGROUPNAME” | Select name, samaccountname | export-csv -path C:\groupmembers.csv</p></blockquote>
-<p>If you don’t have the AD Group name to find the members you can access it using the following:</p>
-<blockquote><p>Get-Acl \\path\to\the\folder |Select -Expand Access |Export-Csv C:\path\to\the\filename.csv -NoTypeInformation</p></blockquote>
-<p>The get-acl cmdlet is extremely helpful as it also shows you the file system rights (write, readandexecute, modify, fullcontrol, etc.) as well as describes if the file permissions for the particular item is inherited from another group.</p>
-<p>I was also tasked with renaming all files within a folder. For this task, the new file name needed to eliminate the first characters of the original name that were generated by a system that could not easily and quickly be changed. This scripted when to a specific folder in a directory then selected all items in that directory that ended in .pdf. This was piped to a cmdlet that renamed the item, which in this case was a substring of the original name. </p>
-<blockquote><p>cd c:\path\to\files</p>
-<p>get-childitem *.pdf | rename-item -newname { [string] ($_.name).substring(61)}</p></blockquote>
+  <h2>Takeaways:</h2>
+<p>There is a lot of potential withing PowerShell. In my current job, I have seen it been used as tool to help automate a lot of our processes, such as server builds. Therefore, in going through the training course with Microsoft Virtual Academy, I was already interested. The first part of the training does good job of introducing you to PowerShell and its help system, which I quickly figured out is your best friend. Of all the parts within PowerShell, the help system is the most important. This is because the help system can provide you with detailed information about any of the cmdlets within PowerShell. Therefore, you never have to wonder what a cmdlet does. All you have to do is pull up the help system. Moreover, as the training videos suggested and as I experienced first hand while trying it out at work, PowerShell is very intuitive in that the cmdlets usually concide with what you want to do.</p>
 
-<p>I have also used PowerShell to remove items from a file directory. During an automated process that generated 100s of .pdfs, 100s of .xml files were also created. The following script gets files within a specific directory with a .xml format then loops through those items deleting each one as it goes. </p>
+<p>I did not get to experiment as much as I would have liked since the only Windows-based computer I have is my work laptop, which I did not feel comfortable messing with. However, the beauty of PowerShell is the you don't have to run a cmdlet to find out what it does. For a beginner, the -whatif command will do wonders in easy any discomfort you might have about possibly making a mistake with a cmdlet. Instead of running it, the -whatif command tells you what the cmdlet you have just typed would do if it runs. As the type person who likes to test everything out first before implementing, this feature within PowerShell was an absolute lifesaver.  </p>
 
-<blockquote><p>get-childitem -path 'c:\users\nroberts\desktop\TCTesting' *.xml | foreach {Remove-item -path $_.FullName }</p></blockquote>
-
-<p>During a data management discussion with the HR team, a concern arose about have multiple copies of the same exact files saved in file shares. In order to quantity this concern I used PowerShell to first create a hash (which served as a unique identifier) for each file, then compare the hashes to report on what documents existed in 2 places.</p>
-
-<blockquote><p>Get-childitem -file -recurse | Group-Object Length | Where-Object { $_.Count -gt 1 } | select -ExpandProperty group | foreach  {get-filehash -literalpath $_.fullname} | group -property hash | where { $_.count -gt 1 } | select -ExpandProperty group | select hash, path | Out-File c:\path\to\file\duplicated_files.txt -width 510</p></blockquote>
-<p>A few important items to note: this script runs the get-childitem of the directory you are currently in so make sure you list to that directory before running. If you are comparing a large number of files this can take many hours to complete, especially when this data is encrypted. Once you have identified these duplicate files you can then use PowerShell to move or delete them in mass.</p> 
-<h2>Online Course Evaluation:</h2>
-<p>The content provided by the Microsoft Virtual Academy was information rich but was tailored more for work IT professionals than students. Moreover, the segments of these courses usually an hour, making it harder to commit the information to memory. Finally, the webcast style of this MVA meant that the webcast meant that it included a lot of banter between the hosts, which in my opinion made the lectures longer than they needed to be. In summary, I think PowerShell is the most important skill I acquired with this course, but MVA was a poor delivery system for this content</p>
-<p>My recommendation would be to instead use the PowerShell coursework from edX. This course basically covers the same information as the first half of the MVA (Getting Started with Microsoft PowerShell). While the content is the same, it is explained as though the user has never used PowerShell before and does not assume the user already in a server administration type role. The delivery of the content (short videos, articles, labs and quizzes) is preferable to the model offered by the MVA (long lectures, barely any substantive slides, and extremely challenging quizzes). </p>
+<h2>Course Notes:</h2>
+<p>The first part of the training course, while long, was useful. It guided you through some basic cmdlets and showed you how to troubleshoot by using the help system. However, the second part of the training was a bit difficult to get through as it seemed as if they jumped fomr beginner to advanced far too quickly. There was no middle ground to tie what was thought in the first segment to the second segment. The second part of the training almost felt like a completely different language due to the jarring difference in skill level required to make sense of what the presenters were talking about. Therefore, for anyone looking into taking this training course, I would recommend only going through the first part so that you can gain a basic understanding of what PowerShell can do, but then find a different source to guide you through the more advanced parts of PowerShell.  </p>
 </div>
 
 <script>
